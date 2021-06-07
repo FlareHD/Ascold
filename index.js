@@ -14,6 +14,8 @@ client.on('message', message => {
 		message.channel.send('Pong.');
 	} else if (message.content === `${prefix}server`) {
 		message.channel.send(`Server name: ${message.guild.name}.\nTotal members: ${message.guild.memberCount}.\n This server was created on ${message.guild.createdAt}.\n The server region is ${message.guild.region}.`);
+	} else if (message.content === `${prefix}avatar`) {
+		message.reply(message.author.displayAvatarURL());
 	}
 	
 });
